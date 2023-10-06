@@ -3,6 +3,7 @@ const wordList = ['insecto', 'bootcamp', 'mangos', 'reptil', 'mosca', 'escritori
 
 //se manda a llamar las funciones al dar click al botón
 const button = document.querySelector(".btn-comparar");
+const reinicio = document.querySelector(".reiniciar");
 
 //Función que recibirá dos palabras para comparar parámetros que serán colocados en un array dependiendo de la condición
 function bigWords (string, stringArray){
@@ -33,6 +34,16 @@ button.addEventListener("click", function(){
     //se llama la función para mostrar los resultados
     printArray(result);
 });
+
+reinicio.addEventListener("click", function(){
+    //se eliminan todos los elementos de la lista
+    const listaUl = document.querySelector(".lista");
+        listaUl.innerHTML = "";
+
+    // Limpiamos el campo de entrada
+    const stringUsuario = document.querySelector("#string");
+    stringUsuario.value = "";
+    })
 
 //función para imprimir resultados
 function printArray (arrayList){
